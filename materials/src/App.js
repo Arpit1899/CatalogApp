@@ -4,11 +4,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faTrash } from "@fortawesome/free-solid-svg-icons";
 import SelectedItem from "./components/SelectedItem";
 import InputPanel from "./components/InputPanel";
+import "./App.css";
 
 function App() {
   const [items, setItems] = useState([]);
   const [selectedItem, setSelectedItem] = useState(null);
-  const [name, setName] = useState("New Material");
+  const [name, setName] = useState("");
   const [volume, setVolume] = useState("");
   const [delivery, setDelivery] = useState("");
   const [color, setColor] = useState("");
@@ -127,8 +128,9 @@ function App() {
         <div style={buttonContainer}>
           {/* Add button */}
           <button
+            className="box"
             disabled={items.length === 6}
-            style={add}
+            // style={add}
             onClick={handleAddOnClick}
           >
             <FontAwesomeIcon icon={faPlus} style={{ marginRight: "10px" }} />
@@ -136,11 +138,11 @@ function App() {
           </button>
 
           {/* Delete button */}
-          <button style={Delete} onClick={handleDeleteSelectedItem}>
+          <button className="delete" onClick={handleDeleteSelectedItem}>
             <FontAwesomeIcon icon={faTrash} style={{ marginRight: "10px" }} />
             Delete
           </button>
-          <button style={submit} onClick={handleSubmit}>
+          <button className="submit" onClick={handleSubmit}>
             <FontAwesomeIcon style={{ marginRight: "10px" }} />
             Submit
           </button>
@@ -178,7 +180,7 @@ function App() {
         </div>
 
         {/* Displays total cost */}
-        <div style={totalcost}>Total Cost: $ {totalCost}</div>
+        <div className="totalcost">Total Cost: ${totalCost}</div>
       </div>
     </div>
   );
@@ -214,25 +216,6 @@ const buttonContainer = {
   width: "100%",
   marginLeft: "30px",
 };
-const add = {
-  borderRadius: "15px",
-  color: "white",
-  backgroundColor: "#1B4F72",
-  padding: "10px 20px",
-  marginRight: "10px",
-  border: "none",
-  cursor: "pointer",
-};
-
-const Delete = {
-  borderRadius: "15px",
-  color: "white",
-  backgroundColor: "#E74C3C",
-  padding: "10px 20px",
-  border: "none",
-  cursor: "pointer",
-  marginRight: "10px",
-};
 
 const ListPanel = {
   display: "flex",
@@ -240,15 +223,6 @@ const ListPanel = {
   alignItems: "center",
 };
 
-const submit = {
-  borderRadius: "15px",
-  color: "white",
-  backgroundColor: "#288203",
-  padding: "10px 20px",
-  border: "none",
-  cursor: "pointer",
-  marginRight: "10px",
-};
 
 const order = {
   backgroundColor: "#145A32",
@@ -259,14 +233,5 @@ const order = {
   color: "white",
 };
 
-const totalcost = {
-  backgroundColor: "#1B4F72",
-  borderRadius: "5px",
-  padding: "10px",
-  color: "white",
-  marginLeft: "30px",
-  marginTop: "20px",
-  width: "230px",
-};
 
 export default App;
