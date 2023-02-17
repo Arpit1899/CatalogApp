@@ -1,0 +1,43 @@
+.component {
+    background-color: #17202A;
+    width: 250px;
+    height: 310px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    border: 1px solid #515A5A;
+    margin-top: 30px;
+  }
+  
+  .list-container {
+    width: 99%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 0.5px solid #515A5A;
+    margin-top: 0px;
+    background-color: #17202A;
+    color: white;
+  }
+  
+  .color-indicator {
+    border-radius: 40px;
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  
+  .title {
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 17px;
+  }
+  
+  .volume {
+    margin-left: 20px;
+    margin-top: -15px;
+    font-size: 11px;
+  }
+  
