@@ -9,7 +9,7 @@
     margin-top: 30px;
   }
   
-  .list-container {
+.list-container {
     width: 99%;
     height: 50px;
     display: flex;
@@ -20,6 +20,10 @@
     background-color: #17202A;
     color: white;
   }
+
+.list-container:hover {
+  background-color: #1f2833;
+}
   
   .color-indicator {
     border-radius: 40px;
